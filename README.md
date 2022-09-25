@@ -22,3 +22,13 @@ Step 1 Simple cubit example:-
 4. emit() is a way by which bloc or cubit can produce new state.
 5. Whenever we create a cubit we should also dispose it.
 6. Cubit is just like a streams and stream controller.
+
+Step 2 Simple Bloc example :-
+Bloc :-
+1. bloc works with actions and results.
+2. Blocs are the classes that extends Bloc.
+3. Action is just like an input to a bloc to perform an action.
+4. A bloc can accept more than one type of “event or action” and it can also produce more than one type of state. Because of this we should create a “abstract class” for actions, so that we can say that bloc accepts this single complete class of actions
+5. Bloc provider injects a specific bloc into its build context so that its children can access it.
+6. read() function traverse all the way up to the widget hierarchy and extract the bloc presents in that build context. For eg :- context.read<TestBloc>();  with this we use add() to send an action or command to bloc For eg :- context.read<TestBloc>().add(<-Action name->);
+7. BlocBuilder  is use to listen the changes happening in the bloc and update the dependent children.
