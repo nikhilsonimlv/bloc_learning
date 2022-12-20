@@ -1,40 +1,12 @@
-import 'package:flutter/foundation.dart' show immutable;
-
-@immutable
-class LoginHandle {
-  final String token;
-
-  const LoginHandle(this.token);
-
-  const LoginHandle.fooBar() : token = 'foobar';
-
-  @override
-  bool operator ==(covariant LoginHandle other) => token == other.token;
-
-  @override
-  int get hashCode => token.hashCode;
-
-  @override
-  String toString() {
-    return 'LoginHandle{token: $token}';
-  }
-}
-
-enum LoginErrors { invalidLoginHandle }
-
-@immutable
-class Note {
-  final String title;
-
-  const Note({required this.title});
-
-  @override
-  String toString() {
-    return 'Note{note: $title}';
-  }
-}
-
-final mockNotes = Iterable.generate(
-  3,
-  (i) => Note(title: 'Note ${i + 1}'),
-);
+const images = [
+  'https://bit.ly/3x7J5Qt',
+  'https://bit.ly/3yw1816',
+  'https://bit.ly/36fNNj9',
+  'https://bit.ly/3jOueGG',
+  'https://bit.ly/3qYOtDm',
+  'https://bit.ly/3wt11Ec',
+  'https://bit.ly/3yvFg7X',
+  'https://bit.ly/3ywz0la',
+  'https://bit.ly/3wnASpW',
+  'https://bit.ly/3jXSDto',
+];
